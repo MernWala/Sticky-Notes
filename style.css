@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+/* font-family: 'Aboreto', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+/* font-family: 'Source Code Pro', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+/* font-family: 'Signika Negative', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    padding-top: 6.4rem;
+}
+
+.top-heading{
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+    height: 6.5rem;
+    background-color: #BA0000;
+    width: 100%;
+    padding: 0rem 7rem 0rem 7rem;
+}
+
+.top-heading .branding{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.top-heading .branding .logo{
+    height: calc(100% - .5rem);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 0rem 1rem 0rem 1rem;
+}
+
+.logo i{
+    color: floralwhite;
+    font-size: 4rem;
+}
+
+.branding .branding-content{
+    font-family: 'Source Code Pro', monospace;    
+    color: floralwhite;
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 0.3rem ridge floralwhite;
+    border-radius: 10px;
+    padding: 0rem 0.5rem 0.3rem 0.5rem;
+}
+
+.addNoteSection{
+    position: sticky;
+    top: 6.5rem;
+    z-index: 9999;
+    height: 8rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10rem;
+    margin-bottom: 0rem;
+    transition: all ease .4s;
+    backdrop-filter: blur(7px);
+}
+
+.addNoteSection .addNoteCloser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - .5rem);
+    width: fit-content;
+}
+
+.addNoteCloser .addnote{
+    min-height: 4rem;
+    width: 15rem;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0rem 0.5rem .5rem;
+    cursor: pointer;
+}
+
+.addnote .part-1{
+    height: 3rem;
+    width: 3rem;
+    background: rgb(186 0 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.addnote .part-1 i{
+    color: floralwhite;
+    font-size: 1.5rem;
+}
+
+.addnote .part-2{
+    height: 3rem;
+    width: .5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: width ease .5s;
+    cursor: pointer;
+}
+
+.addnote .part-2 span{
+    font-size: 2rem;
+    font-family: 'Source Code Pro', monospace;
+    position: absolute;
+}
+
+.addnote:hover .part-1{
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.addnote:hover .part-2{
+    background-color: #BA0000;
+    width: 10.7rem;
+    transition: width ease .5s;
+}
+
+.addnote:hover .part-2-content{
+    color: floralwhite;
+    transition: all ease .3s;
+}
+
+.main-body{
+    background-color: #eee;
+    min-height: calc(100vh - 14.5rem);
+}
+
+.main-body .main-body-closer{
+    position: relative;
+    /* height: calc(100% - .5rem); */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card-main-container{
+    height: 16rem;
+    width: 32rem;
+    margin: 1rem 0rem 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #ba0000;
+    background: floralwhite;
+}
+
+.card-main-container .card-closer{
+    position: relative;
+    height: calc(100% - 1rem);
+    width: calc(100% - 1rem);
+}
+
+.card-closer .card-header{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.card-closer .card-header button{
+    font-size: 1.5rem;
+    color: floralwhite;
+    border-radius: 15px;
+    padding: .5rem;
+    margin: .3rem .5rem;
+    transition: all ease .3s;
+    border: none;
+}
+
+.card-closer .card-header .edit{
+    background-color: #3FE215;
+}
+
+.card-closer .card-header .delete{
+    background-color: red;
+}
+
+.card-closer textarea{
+    height: calc(100% - 3rem);
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+}
+
+.card-closer textarea:focus{
+    outline: none;
+    border: none;
+}
+
+.card-header .edit:hover{
+    color: #3FE215;
+    background-color: floralwhite!important;
+    border: 1px solid #3FE215;
+    transition: all ease .3s;
+    cursor: pointer;    
+}
+
+.card-header .delete:hover{
+    background-color: floralwhite!important;
+    color: #BA0000;
+    border: 1px solid #BA0000;
+    transition: all ease .3s;
+    border: 1px solid #BA0000;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.card-data{
+    font-size: 1.5rem;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 600;
+}
